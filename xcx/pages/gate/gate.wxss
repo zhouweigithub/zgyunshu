@@ -1,0 +1,55 @@
+page {
+    background-color: #f8f8f8;
+}
+
+.point {
+    height: 80rpx;
+    background: #fff;
+    padding-top: 20rpx;
+    border-bottom: 1rpx solid #f2f2f2;
+    font-size: 30rpx;
+    text-align: center;
+    color: #e64340;
+}
+
+text {
+    vertical-align: middle;
+    margin-left: 10rpx;
+}
+
+.section view {
+    margin-left: 40rpx;
+    margin-top: 40rpx;
+    font-size: 30rpx;
+}
+
+.upidCart {
+    margin-top: 20rpx;
+    background: #fff;
+    border-top: 1rpx solid #f2f2f2;
+}
+
+.upidCart image {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.upidCart text {
+    font-size: 28rpx;
+    display: block;
+    text-align: center;
+    margin-top: -40rpx;
+    margin-bottom: 20rpx;
+}
+
+.other-button-hover {
+    background-color: #05f080;
+}
+
+.putInfo {
+    margin: 10px;
+}
+
+.putInfoView {
+    background-color: #fff;
+}

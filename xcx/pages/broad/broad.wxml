@@ -1,0 +1,12 @@
+<view style="width:100%;position: fixed;height: 100%">
+    <scroll-view scrollY class="scroll-view_H" style="width: 100%;height:100%">
+        <view bindtap="toCont" class="board_list" data-id="{{index}}" wx:for="{{list}}">
+            <view class="title">{{item.tit}}</view>
+            <view class="cont">{{item.cont}}</view>
+            <view class="video"></view>
+            <view class="img"></view>
+            <view class="time">{{item.time}}</view>
+        </view>
+        <view style="height: 100rpx;"></view>
+    </scroll-view>
+</view>

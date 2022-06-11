@@ -1,0 +1,11 @@
+<view class="newpwd">
+    <view>
+        <view class="type">新密码</view>
+        <input></input>
+    </view>
+    <view style="margin-top: 30rpx">
+        <view class="type">确认密码</view>
+        <input></input>
+    </view>
+    <button class="upinfo" hoverClass="other-button-hover"> 提交 </button>
+</view>

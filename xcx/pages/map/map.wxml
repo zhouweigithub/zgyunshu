@@ -1,0 +1,7 @@
+<view class="map_box">
+    <map id="navi_map" latitude="{{lat}}" longitude="{{lon}}" markers="{{markers}}" polyline="{{polyline}}" scale="{{scale}}"></map>
+</view>
+<view bindtap="chooseCarid" class="text_box">{{carid}}
+	<view style="line-height: 50px;margin-left: 30px;display: inline-block;font-size: 28rpx">距离目的地还有{{distance}}</view>
+    <image src="../../images/downlist.png"></image>
+</view>

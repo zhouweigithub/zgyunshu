@@ -1,0 +1,31 @@
+<view class="empty_tip">
+    <view class="empty_item">
+        <view class="viewclass">
+            <view bindtap="navToGate" class="viewclass_item" style="background:#e07570;">
+                <image mode="aspectFit" src="{{src1}}"></image>
+                <text class="viewview">门岗</text>
+            </view>
+        </view>
+        <view class="viewclass">
+            <view bindtap="navToCust" class="viewclass_item" style="background:#75a0f5;">
+                <image mode="aspectFit" src="{{src2}}"></image>
+                <text class="viewview">经销商</text>
+            </view>
+        </view>
+    </view>
+    <button bindgetuserinfo="getUserInfo" openType="getUserInfo" style="position: absolute;width: 100%;height: 100%;background-color: rgba(255,255,255,0)" wx:if="{{!hasUserInfo&&canIUse}}"></button>
+    <view class="empty_item">
+        <view class="viewclass">
+            <view bindtap="navToOwner" class="viewclass_item" style="background:#86d080">
+                <image mode="aspectFit" src="{{src3}}"></image>
+                <text class="viewview">车主</text>
+            </view>
+        </view>
+        <view class="viewclass">
+            <view bindtap="navToDriver" class="viewclass_item" style="background:#ffd056">
+                <image mode="aspectFit" src="{{src4}}"></image>
+                <text class="viewview">司机</text>
+            </view>
+        </view>
+    </view>
+</view>

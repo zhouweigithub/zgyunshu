@@ -1,0 +1,63 @@
+{
+    "pages": [
+        "pages/owner/owner",
+        "pages/logs/logs",
+        "pages/forgetpwd/forgetpwd",
+        "pages/newPwd/newPwd",
+        "pages/main/main",
+        "pages/list/list",
+        "pages/user/user",
+        "pages/map/map",
+        "pages/driverMsg/driverMsg",
+        "pages/carMsg/carMsg",
+        "pages/addCar/addCar",
+        "pages/listCont/lico",
+        "pages/driverPage/driverpage",
+        "pages/addInfo/addinfo",
+        "pages/driverList/driverlist",
+        "pages/listCxt/listcxt",
+        "pages/notice/notice",
+        "pages/sentry/sentry",
+        "pages/mainOrder/mainorder",
+        "pages/QR/qr",
+        "pages/checkOrderinfo/checkinfo",
+        "pages/driverGetMsg/drivermsg",
+        "pages/mainList/mainlist",
+        "pages/broad/broad",
+        "pages/TruckInfo/truckinfo",
+        "pages/ShowMeter/showmeter",
+        "pages/boardCont/boardcont"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#888",
+        "selectedColor": "#535353",
+        "backgroundColor": "#fff",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/main/main",
+                "text": "首页",
+                "iconPath": "images/main.png",
+                "selectedIconPath": "images/main_focus.png"
+            },
+            {
+                "pagePath": "pages/list/list",
+                "text": "列表",
+                "iconPath": "images/list.png",
+                "selectedIconPath": "images/list_focus.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "个人",
+                "iconPath": "images/userinfo.png",
+                "selectedIconPath": "images/userinfo_focus.png"
+            }
+        ]
+    }
+}

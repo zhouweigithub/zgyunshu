@@ -1,0 +1,40 @@
+<view class="nav">
+    <view bindtap="signBtn" class="login">注册
+			<view class="focus" style="{{focus?'display:block':'display:none'}}"></view>
+    </view>
+    <view bindtap="loginBtn" class="login">登陆
+			<view class="focus" style="{{focusd?'display:block':'display:none'}}"></view>
+    </view>
+</view>
+<view class="cont" style="{{focus?'display: block':'display:none'}}">
+    <view>
+        <view class="type">公司名</view>
+        <input></input>
+    </view>
+    <view style="margin-top: 30rpx">
+        <view class="type">手机号</view>
+        <view class="phonenum"><button bindgetphonenumber="getPhoneNumber" class="getphonebtn" hoverClass="other-button-hover" openType="getPhoneNumber">获取手机号</button>
+        </view>
+    </view>
+    <view style="margin-top: 30rpx">
+        <view class="type">密码</view>
+        <input autoFocus password="true"></input>
+    </view>
+    <view style="margin-top: 30rpx">
+        <view class="type">密码确认</view>
+        <input autoFocus password="true"></input>
+    </view>
+    <button class="upinfo" hoverClass="other-button-hover"> 注册 </button>
+</view>
+<view class="cont" style="{{focusd?'display: block':'display:none'}}">
+    <view>
+        <view class="type">公司名</view>
+        <input></input>
+    </view>
+    <view style="margin-top: 30rpx">
+        <view class="type">密码</view>
+        <input autoFocus password="true"></input>
+    </view>
+    <view bindtap="forgePwd" style="margin-top: 10rpx;position: relative;right: -480rpx;font-size: 28rpx;color: #4567e0">忘记密码</view>
+    <button class="upinfo" hoverClass="other-button-hover"> 登陆 </button>
+</view>

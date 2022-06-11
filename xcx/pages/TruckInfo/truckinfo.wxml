@@ -1,0 +1,8 @@
+<view style="width: 100%;height: 100%;position: fixed">
+    <scroll-view scollY style="width: 100%;height: 100%">
+        <view style="border-bottom:1rpx solid #f2f2f2;height: 100rpx;line-height: 100rpx;" wx:for="{{array}}">
+            <view style="display: inline-block;font-size: 32rpx;color:#888;margin-left: 60rpx">{{index}}:</view>
+            <view style="display: inline-block;color: #535353;font-size: 32rpx;margin-left: 100rpx;">{{cont[item]}}</view>
+        </view>
+    </scroll-view>
+</view>

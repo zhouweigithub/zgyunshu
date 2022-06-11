@@ -1,0 +1,9 @@
+<template name="tabBar">
+    <view style="position: fixed;bottom:0;width: 100%;flex-direction:row;display:flex;background-color: #fff;">
+        <navigator class="menu-item" hoverClass="none" openType="redirect" style="{{item.active?'color: '+(item.selectedColor?item.selectedColor:item.color):''}};flex:1;display:flex;flex-direction:column;padding-top:20rpx" url="{{item.pagePath}}" wx:for="{{tabBar.list}}" wx:key="pagePath">
+            <image src="{{item.selectedIconPath}}" style="flex:1;width: 60rpx;height:80rpx;position: relative;left: 50%;margin-left: -30rpx" wx:if="{{item.active}}"></image>
+            <image src="{{item.iconPath}}" style="flex:1;width: 60rpx;height:80rpx;position: relative;left: 50%;margin-left: -30rpx" wx:if="{{!item.active}}"></image>
+            <text style="flex:1;font-size: 26rpx;text-align: center;color:{{item.active?item.selectedColor:item.color}}">{{item.text}}</text>
+        </navigator>
+    </view>
+</template>

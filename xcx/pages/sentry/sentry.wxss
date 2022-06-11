@@ -1,0 +1,46 @@
+.name {
+    position: absolute;
+    top: 30rpx;
+    font-size: 30rpx;
+    color: #535353;
+    left: 30rpx;
+}
+
+.material {
+    position: absolute;
+    color: #535353;
+    bottom: 30rpx;
+    left: 30rpx;
+    font-size: 30rpx;
+}
+
+.rules {
+    font-size: 30rpx;
+    position: absolute;
+    top: 30rpx;
+    left: 140rpx;
+}
+
+.id {
+    border: 1rpx solid #f0f0f0;
+    height: 40rpx;
+    padding: 10rpx;
+    position: absolute;
+    right: 20rpx;
+    top: 20rpx;
+    font-size: 30rpx;
+}
+
+.mNum {
+    display: inline-block;
+    font-size: 30rpx;
+    position: absolute;
+    right: 30rpx;
+    bottom: 20rpx;
+}
+
+.itemCon {
+    border-bottom: 1rpx solid #f0f0f0;
+    height: 200rpx;
+    position: relative;
+}

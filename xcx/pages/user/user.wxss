@@ -1,0 +1,64 @@
+page {
+    background-color: #f8f8f8;
+}
+
+.userInfo {
+    width: 100%;
+    height: 260rpx;
+    background-color: #fff;
+    border-bottom: 1rpx solid #f6f6f6;
+}
+
+.item {
+    height: 150rpx;
+    position: relative;
+}
+
+.imageItem {
+    width: 15%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.imageItem image {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 20rpx;
+    position: absolute;
+    top: 50%;
+    margin-top: -30rpx;
+    margin-left: 30rpx;
+}
+
+.title {
+    width: 60%;
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+}
+
+.title text {
+    display: block;
+    height: 150rpx;
+    line-height: 150rpx;
+    font-size: 32rpx;
+    margin-left: 20rpx;
+    color: #535353;
+}
+
+.num {
+    width: 25%;
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+}
+
+.num text {
+    height: 150rpx;
+    line-height: 150rpx;
+    display: block;
+    margin-left: 20rpx;
+    font-size: 34rpx;
+    color: #888;
+}

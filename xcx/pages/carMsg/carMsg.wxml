@@ -1,0 +1,15 @@
+<view class="carmsg" style="position:fixed;width: 100%;height: 100%">
+    <view wx:if="{{!cars}}">
+        <image src="../../images/carinfo.png" style="width:200rpx;height: 180rpx;position: absolute;top:45%;left:50%;margin-left: -90rpx;margin-top: -90rpx"></image>
+        <view style="position: absolute;top:45%;margin-top: 100rpx;font-size: 28rpx;color:#888;left:50%;margin-left: -100rpx">当前无车辆,请添加</view>
+    </view>
+    <scroll-view scrollY style="height: 100%;">
+        <view bindtap="choose" data-change="{{item.change_able}}" data-index="{{item.truck_id}}" wx:if="{{item.truck_live}}" wx:for="{{cars}}">
+            <view style="width:90%;margin-left: 5%;margin-top: 20rpx;border-radius: 6rpx;border:1rpx solid #f0f0f0;height: 100rpx;position: relative;">
+                <text style="font-weight: 34rpx;color:#535353;line-height: 100rpx;margin-left: 40rpx;">{{item.truck_licence}}</text>
+                <text style="font-size:28rpx;color:#888;right: 40rpx;position: absolute;top: 50%;margin-top: -14rpx;" wx:if="{{item.truck_service}}">已抢货</text>
+            </view>
+        </view>
+    </scroll-view>
+    <view bindtap="addCar" style="position: absolute;box-shadow:5rpx 5rpx 5rpx rgba(0,0,0,0.3);width:100rpx;height:100rpx;font-size: 50rpx;color:#fff;border-radius: 50%;right: 0;margin-right: 40rpx;bottom: 0;margin-bottom: 100rpx;background-color: #535353;text-align: center;line-height: 90rpx">+</view>
+</view>

@@ -1,0 +1,26 @@
+<view style="width:100%;height:100%;position: fixed">
+    <view bindtap="callPhone" class="owner" wx:if="{{owner}}">
+        <view class="name">
+            <view>{{owner.owner_name}}</view>
+        </view>
+        <image class="avator" src="{{owner.owner_avatar}}"></image>
+        <view class="phoneBoder">
+            <view class="phone">{{owner.owner_phone}}</view>
+            <view class="phoneIcon">
+                <image class="icon" src="../../images/call.png"></image>
+            </view>
+        </view>
+    </view>
+    <scroll-view scrollY style="height:100%;width: 100%" wx:if="{{arrays}}">
+        <view style="display: inline-block;width:12rpx;height:32rpx;background: #535353;position:relative;top:20rpx;left:0"></view>
+        <view style="position: relative;left:30rpx;top:20rpx;font-size: 30rpx;color:#535353;display: inline-block;">
+			请求信息
+		</view>
+        <view class="list_item" wx:for="{{arrays}}">
+            <image class="InfoAvator" src="{{item.owner_avatar}}"></image>
+            <view class="InfoName">{{item.owner_name}}</view>
+            <view class="InfoNumber">{{item.owner_phone}}</view>
+            <view bindtap="bindOwner" class="buttom" data-id="{{item.owner_id}}" data-index="{{index}}">同意</view>
+        </view>
+    </scroll-view>
+</view>

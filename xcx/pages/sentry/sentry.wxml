@@ -1,0 +1,22 @@
+<view style="width:100%;height:100%;position: fixed">
+    <view style="width:100%;height:300rpx;border-bottom:1rpx solid #f2f2f2">
+        <view>{{address}}</view>
+        <view>车主{{carMain}}</view>
+        <view>司机{{driver}}</view>
+        <view>{{carid}}</view>
+        <view>{{time}}</view>
+        <view>{{price}}</view>
+    </view>
+    <view>
+        <scroll-view scrollY style="position: fixed;height: calc(100% - 420rpx);width: 100%">
+            <view class="itemCon" wx:for="{{arrayinfo}}">
+                <view class="name">{{item.name}}</view>
+                <view class="material">{{item.material}}</view>
+                <view class="rules">{{item.format}}</view>
+                <view class="id">{{item.serial}}</view>
+                <view class="mNum">共   <view style="display: inline-block;font-size: 40rpx;color:#ff9e00">{{item.num}}</view>   件</view>
+            </view>
+            <view style="height:100rpx;width:100%;"></view>
+        </scroll-view>
+    </view>
+</view>

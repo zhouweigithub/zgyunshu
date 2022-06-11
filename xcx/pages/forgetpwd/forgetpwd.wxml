@@ -1,0 +1,14 @@
+<view class="forget">
+    <view>
+        <view class="type">公司名</view>
+        <input></input>
+    </view>
+    <view style="margin-top: 30rpx">
+        <view class="type">验证码</view>
+        <view style="border-bottom: 2rpx solid #eee">
+            <input style="width: 420rpx;display: inline-block;border:0"></input>
+            <button bindtap="getCode" class="getphonebtn" disabled="{{disabled}}" hoverClass="other-button-hover">{{disabled?time:'验证码'}}</button>
+        </view>
+    </view>
+    <button bindtap="checkinfo" class="upinfo" disabled="{{updisab}}" hoverClass="other-button-hover" loading="{{loading}}"> 提交 </button>
+</view>

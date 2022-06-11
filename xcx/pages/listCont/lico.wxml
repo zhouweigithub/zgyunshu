@@ -1,0 +1,60 @@
+<movable-area style="position: fixed;height: 100%;width:100%">
+    <view class="li_info">
+        <view class="addre">{{array.order_address}}</view>
+        <view class="price">¥{{array.order_cost}}</view>
+        <image src="../../images/distance.png"></image>
+        <view class="num">
+            <view style="margin-right: 10rpx;">剩   </view>{{count}}<view style="margin-left: 10rpx">   辆</view>
+        </view>
+        <view class="limit">不限长</view>
+        <view class="time">{{array.order_limit_time}}</view>
+        <view class="distance">{{array.order_distance}}公里</view>
+        <view class="item"></view>
+    </view>
+    <view>
+        <view class="hint"></view>
+        <view style="color:#535353;font-weight: bold;font-size: 30rpx;display: inline-block;margin-left: 20rpx;vertical-align: text-top;">限制要求
+		</view>
+        <view class="limits">
+            <view class="limit_item">
+                <view class="Lhint"></view>
+                <view>{{array.order_bridge}}</view>
+            </view>
+            <view class="limit_item">
+                <view class="Lhint"></view>
+                <view>{{array.order_railing}}</view>
+            </view>
+            <view class="limit_item">
+                <view class="Lhint"></view>
+                <view>{{array.order_axle}}</view>
+            </view>
+            <view class="limit_item">
+                <view class="Lhint"></view>
+                <view>{{array.order_box_length}}</view>
+            </view>
+        </view>
+    </view>
+    <view>
+        <view class="hint"></view>
+        <view style="color:#535353;font-weight: bold;font-size: 30rpx;display: inline-block;margin-left: 20rpx;vertical-align: text-top;">物品详情
+		</view>
+        <scroll-view scrollY style="position: fixed;height: calc(100% - 420rpx);width: 100%">
+            <view class="itemCon" wx:for="{{array.material}}">
+                <view class="name">{{item.material_name}}</view>
+                <view class="material">{{item.material_message}}</view>
+                <view class="rules">{{item.material_rank}}</view>
+                <view class="id">{{item.material_number}}</view>
+                <view class="mNum">共   <view style="display: inline-block;font-size: 40rpx;color:#ff9e00">{{item.material_count}}</view>   件</view>
+            </view>
+            <view style="height:100rpx;width:100%;"></view>
+        </scroll-view>
+    </view>
+    <movable-view direction="all" style="height: 100rpx; width: 100rpx; background-color: #535353;border-radius: 50rpx;box-shadow: 3rpx 3rpx 6rpx rgba(0,0,0,0.3);font-size: 30rpx;line-height: 100rpx;text-align: center;color:#fff;bottom:100rpx;right:60rpx" x="300" y="550">{{count_down}}
+		<image class="load" src="../../images/load.gif" style="width:calc(100% - 14px);height:calc(100% - 14px);position:absolute;top:7px;left:7px" wx:if="{{!hasInfo}}"></image>
+        <view class="section" style="z-index:10000;height: 100rpx">
+            <picker bindchange="bindPickerChange" disabled="{{disabled}}" range="{{multiArray}}" style="width: 100rpx;height: 100rpx;position: absolute;top:0" value="{{multiIndex}}">
+                <view class="picker" style="width: 100rpx;height: 100rpx"></view>
+            </picker>
+        </view>
+    </movable-view>
+</movable-area>

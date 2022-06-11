@@ -1,0 +1,67 @@
+.items {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 20rpx;
+    background-color: #fff;
+    height: 200rpx;
+    border-radius: 12rpx;
+    box-shadow: 0 0 20rpx rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.items view {
+    position: absolute;
+    display: inline-block;
+}
+
+.address {
+    top: 20rpx;
+    left: 30rpx;
+    font-size: 32rpx;
+    color: 535353;
+}
+
+.time {
+    bottom: 20rpx;
+    right: 30rpx;
+    font-size: 30rpx;
+    color: #888;
+}
+
+.price {
+    font-size: 32rpx;
+    color: #ff9e00;
+    bottom: 80rpx;
+    right: 30rpx;
+}
+
+.carmain {
+    right: 30rpx;
+    font-size: 30rpx;
+    color: #535353;
+    top: 30rpx;
+}
+
+.carNumber {
+    left: 30rpx;
+    bottom: 20rpx;
+    border: 1rpx solid #f0f0f0;
+    border-radius: 4rpx;
+    padding: 10rpx;
+    font-size: 26rpx;
+    color: #888;
+}
+
+.ok {
+    width: 10rpx;
+    height: 30rpx;
+    background: linear-gradient(rgba(13,207,154,1),rgba(205,231,228,0.3));
+    left: 10rpx;
+}
+
+.no {
+    width: 10rpx;
+    height: 30rpx;
+    background: linear-gradient(rgba(227,64,72,1),rgba(245,217,228,0.3));
+    left: 10rpx;
+}

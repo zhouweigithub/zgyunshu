@@ -1,0 +1,29 @@
+<button bindgetuserinfo="getUserInfo" openType="getUserInfo" style="position: absolute;width: 100%;height: 120%;background-color: rgba(255,255,255,0)" wx:if="{{!hasUserInfo&&canIUse}}"></button>
+<view class="point">
+    <text>{{pointmsg}}</text>
+</view>
+<view class="info_cart">
+    <picker bindchange="bindPickerChange" range="{{array}}" style="height:80rpx;margin-top: 20rpx" value="{{index}}">
+        <view class="picker" style="line-height: 80rpx;margin-left: 40rpx;width:80%;display:inline-block;font-size: 34rpx;color:#535353;font-weight: bold">
+      		类型：{{array[index]}}
+    	</view>
+        <image src="../../images/down_choose.png" style="width: 40rpx;height: 40rpx;display:inline-block;margin-top: 30rpx;"></image>
+    </picker>
+    <view class="section">
+        <view>车主手机号</view>
+        <input autoFocus bindblur="unFocusEvent" bindfocus="focusEvent" bindinput="bingKeyInput" class="{{focus?'input_focus':'input_unfocus'}}" maxlength="11" type="number"></input>
+    </view>
+</view>
+<view class="upidCart">
+    <view bindtap="chooseFaceImg">
+        <image mode="aspectFit" src="{{src}}"></image>
+        <text>上传身份证正面(人像)</text>
+    </view>
+    <view bindtap="chooseImg">
+        <image mode="aspectFit" src="{{src1}}" style="border-top: 1rpx solid #f2f2f2"></image>
+        <text>上传身份证正面(国徽)</text>
+    </view>
+    <view class="putInfoView">
+        <button bindtap="upInfo" class="putInfo" disabled="{{disabled}}" loading="{{loading}}" size="default" type="primary">提交</button>
+    </view>
+</view>

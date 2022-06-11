@@ -1,0 +1,7 @@
+<import src="../..//wxParse/wxParse.wxml"></import>
+<view>
+    <view class="title">{{arr.title}}</view>
+    <view style="width:90%;margin-left: 5%;margin-top: 20rpx;line-height: 46rpx;font-size: 26rpx;color:#535353">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+    </view>
+</view>

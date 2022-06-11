@@ -1,0 +1,8 @@
+<view style="width:100%;position: fixed;height: 100%;text-align: center;">
+    <view class="hintinfo">补交信息，添加司机</view>
+    <view>
+        <image bindtap="chooseImg" mode="aspectFit" src="{{src}}"></image>
+        <view style="font-size: 34rpx; color:#535353">司机身份证</view>
+    </view>
+    <button bindtap="updata" class="upinfo" disabled="{{disabled}}" hoverClass="other-button-hover"> 提交 </button>
+</view>

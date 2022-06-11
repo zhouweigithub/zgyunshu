@@ -1,0 +1,10 @@
+<view style="width:100%;height: 100%;position: fixed">
+    <scroll-view scrollY style="width:100%;height: 100%">
+        <view class="items" wx:for="{{arrays}}">
+            <view class="world">{{item.world}}</view>
+            <view class="image" wx:if="{{item.img}}">{{item.img}}</view>
+            <view class="time">{{item.time}}</view>
+            <view></view>
+        </view>
+    </scroll-view>
+</view>

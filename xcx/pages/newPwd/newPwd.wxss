@@ -1,0 +1,33 @@
+.newpwd {
+    width: 600rpx;
+    margin-left: 75rpx;
+    margin-left: 40rpx;
+}
+
+.type {
+    font-size: 24rpx;
+    color: #888;
+    font-weight: bold;
+}
+
+input {
+    border-bottom: 2rpx solid #eee;
+    height: 70rpx;
+    line-height: 60rpx;
+    font-size: 28rpx;
+}
+
+button[disabled]:not([type]) {
+    color: #fff;
+    background-color: #686868;
+}
+
+.upinfo {
+    border-radius: 0;
+    position: none;
+    background-color: #686868;
+    color: #fff;
+    width: 400rpx;
+    margin-top: 40rpx;
+    box-shadow: 0 4rpx 4rpx rgba(0,0,0,0.3);
+}

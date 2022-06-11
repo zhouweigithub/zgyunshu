@@ -1,0 +1,26 @@
+<view class="point">
+    <text>{{pointmsg}}</text>
+</view>
+<view class="info_cart">
+    <view class="section">
+        <view>车主手机号</view>
+        <input bindinput="bingKeyInput" maxlength="11" type="number"></input>
+    </view>
+</view>
+<view class="upidCart">
+    <view bindtap="chooseFaceImg">
+        <image mode="aspectFit" src="{{src}}"></image>
+        <text>上传身份证正面(人像)</text>
+    </view>
+    <view bindtap="chooseImg">
+        <image mode="aspectFit" src="{{src1}}" style="border-top: 1rpx solid #f2f2f2"></image>
+        <text>上传身份证正面(国徽)</text>
+    </view>
+    <view bindtap="chooseCarImg">
+        <image mode="aspectFit" src="{{src2}}"></image>
+        <text>驾驶证</text>
+    </view>
+    <view class="putInfoView">
+        <button bindtap="upInfo" class="putInfo" loading="{{loading}}" size="default" type="primary">提交</button>
+    </view>
+</view>

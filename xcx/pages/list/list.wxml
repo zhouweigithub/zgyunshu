@@ -1,0 +1,30 @@
+<view style="height: 100%;position: fixed;width: 100%">
+    <view class="header" hidden="{{hideHeader}}" style="height: 30rpx;line-height: 30rpx;font-size: 20rpx;color: #888;text-align: center;width: 100%">
+        <view>下拉刷新中……</view>
+        <view>{{refreshTime}}</view>
+    </view>
+    <scroll-view scrollY bindscrolltoupper="refresh" scrollTop="{{scrolltop}}" style="position: fixed;height: 100%;width: 100%">
+        <view class="noCont" wx:if="{{!src}}">
+            <image src="../../images/order.png"></image>
+            <view style="margin-top: 30rpx;">当前无订单</view>
+        </view>
+        <view bindtap="listCont" class="list_item" data-index="{{index}}" wx:if="{{src}}" wx:for="{{items}}">
+            <image src="../../images/reach.png" style="width:240rpx;height:100rpx;position: absolute;margin-left: 20rpx;margin-top: 30rpx"></image>
+            <view class="address">{{item.order_address}}</view>
+            <view class="price">¥<text style="font-size: 60rpx;margin-left: 10rpx;">{{item.order_cost}}</text>
+            </view>
+            <view class="distance">{{item.order_distance}}公里</view>
+            <view class="time">{{item.order_limit_time}}</view>
+            <view class="num">
+                <text style="font-size:26rpx;color:#fff">剩   </text>{{item.order_left_car}}<text style="font-size:26rpx;color:#fff">   辆</text>
+            </view>
+            <view style="height:60rpx;font-size: 28rpx;color:#fff;background:#d07081;border-radius: 8rpx;padding-right: 20rpx;padding-left: 20rpx;line-height: 60rpx;box-shadow: 0 0 10rpx rgba(0,0,0,0.1);display: inline-block;position: absolute;left:30rpx;bottom: 120rpx;" wx:if="{{item.remark!=''&&item.remark!=null}}">{{item.remark}}</view>
+            <view style="position: relative;bottom: 30rpx;right: 10rpx;margin-right: 20rpx;">
+                <view class="limit-item" wx:if="{{item.order_bridge!='不限'}}">{{item.order_bridge}}</view>
+                <view class="limit-item" wx:if="{{item.order_railing!='不限'}}">{{item.order_railing}}</view>
+                <view class="limit-item" wx:if="{{item.order_axle!='不限'}}">{{item.order_axle}}</view>
+                <view class="limit-item" wx:if="{{item.order_box_length!='不限长'}}">{{item.order_box_length}}米</view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

@@ -1,0 +1,14 @@
+<view style="position: fixed;width:90%;height:100%;margin-left: 5%">
+    <scroll-view scrollY style="position: fixed;height: 100%;width: 100%">
+        <view bindtap="toFocus" class="item" data-index="{{item.index}}" wx:for="{{items}}">
+            <text class="title">{{item.name}}:</text>
+            <input bindfocus="onFocus" bindinput="inputValue" data-index="{{item.index}}" focus="{{item.focus}}" maxlength="17"></input>
+        </view>
+        <picker bindchange="bindPickerChange" data-index="{{item.focus}}" range="{{item.array}}" style="height:120rpx;border-bottom: 1rpx solid #f0f0f0;" value="{{item.index}}" wx:for="{{arrays}}">
+            <view class="picker" style="color:#888;font-size: 30rpx;height: 120rpx;line-height: 120rpx;">
+	      		{{item.name}}:<view style="margin-left: 160rpx;font-size: 32rpx;color:#535353;display: inline-block;">{{item.array[item.indexs]}}</view>
+            </view>
+        </picker>
+        <button bindtap="putInfo" class="upinfo" hoverClass="other-button-hover"> 提交 </button>
+    </scroll-view>
+</view>

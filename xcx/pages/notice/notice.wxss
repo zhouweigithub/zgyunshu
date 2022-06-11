@@ -1,0 +1,18 @@
+page {
+    background: #f8f8f8;
+}
+
+items {
+    width: 100%;
+    margin-top: 20rpx;
+    box-shadow: 0 2rpx 6rpx rgba(0,0,0,0.3);
+}
+
+.time {
+}
+
+.image {
+}
+
+.world {
+}

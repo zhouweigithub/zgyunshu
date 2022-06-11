@@ -1,0 +1,26 @@
+<view style="position: fixed;width:100%;height:100%">
+    <scroll-view scrollY style="height: 100%;width: 100%;position: relative;">
+        <view catchtap="toShow" class="items" data-id="{{item}}" wx:for="{{arrays}}">
+            <view class="address" style="position: absolute">{{item.order_message.order_address}}</view>
+            <view class="time" style="position: absolute">{{item.order_message.order_limit_time}}</view>
+            <view class="price" style="position: absolute">¥{{item.order_message.order_cost}}</view>
+            <view class="carmain" style="position: absolute">{{item.owner_message.owner_message}}</view>
+            <view class="carNumber" style="position: absolute">{{item.truck_message.truck_licence}}</view>
+            <view class="driver" style="position: absolute" wx:if="{{item.driver_message}}">{{item.driver_message.driver_name}}</view>
+            <view class="driver" style="position: absolute" wx:if="{{!item.driver_message&&!item.checkTime}}">过期不可分配</view>
+            <picker catchchange="bindPickerChange" class="driverMsg" data-id="{{item.order_detail_id}}" range="{{list}}" value="{{listindex}}" wx:if="{{!item.driver_message&&item.checkTime}}">
+                <view class="picker">
+      				司机分配
+   				 </view>
+            </picker>
+            <view class="ok" style="position: absolute" wx:if="{{item.order_status=='complete'}}"></view>
+            <view class="no" style="position: absolute" wx:if="{{item.order_status=='lose'}}"></view>
+            <view class="customer" style="border-top:1rpx solid #f2f2f2;border-radius: 4px;width:90%;margin-left: 5%;margin-top: 240rpx;">
+                <view style="font-size: 30rpx;margin-left: 5%;margin-top: 10rpx;display: block;">客商名称:<view style="display: inline-block;margin-left: 20rpx;">{{item.order_message.customer_name}}</view>
+                </view>
+                <view style="font-size: 30rpx;margin-left: 5%;margin-top: 10rpx;display: block;">客商电话:<view style="display: inline-block;margin-left: 20rpx;">{{item.order_message.customer_phone}}</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

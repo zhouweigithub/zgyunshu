@@ -1,0 +1,115 @@
+.owner {
+    width: 90%;
+    height: 160rpx;
+    background: rgb(52,194,124);
+    color: #fff;
+    top: 20rpx;
+    left: 5%;
+    position: relative;
+    border-radius: 4rpx;
+    font-size: 30rpx;
+}
+
+.name {
+    position: absolute;
+    left: 180rpx;
+    display: inline-block;
+    line-height: 160rpx;
+}
+
+.avator {
+    position: absolute;
+    height: 120rpx;
+    width: 120rpx;
+    top: 20rpx;
+    left: 20rpx;
+}
+
+.phoneBoder {
+    position: relative;
+    width: 300rpx;
+    height: 80rpx;
+    top: 40rpx;
+    margin-left: 350rpx;
+    border-radius: 2rpx solid rgb(52,200,130);
+    box-shadow: 0 0 5rpx rgba(255,255,255,0.2);
+    border-radius: 50rpx;
+    background: #fff;
+}
+
+.phoneIcon {
+    line-height: 80rpx;
+    display: inline-block;
+    width: 30rpx;
+    height: 30rpx;
+    background: rgba(0,0,0,0);
+    margin-left: 20rpx;
+}
+
+.phone {
+    line-height: 80rpx;
+    font-size: 34rpx;
+    color: #535353;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20rpx;
+}
+
+.icon {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.InfoAvator {
+    height: 100rpx;
+    width: 100rpx;
+    margin-left: 20rpx;
+    background: #f0f0f0;
+    margin-top: 20rpx;
+    display: inline-block;
+}
+
+.InfoName {
+    font-size: 32rpx;
+    color: #535353;
+    line-height: 140rpx;
+    display: inline-block;
+    vertical-align: top;
+    color: #535353;
+    margin-left: 20rpx;
+}
+
+.InfoNumber {
+    display: inline-block;
+    line-height: 140rpx;
+    vertical-align: top;
+    margin-left: 20rpx;
+    color: #535353;
+    font-size: 32rpx;
+}
+
+.list_item {
+    margin-top: 20rpx;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 6rpx;
+    height: 140rpx;
+    border: 1rpx solid #f2f2f2;
+    position: relative;
+}
+
+.buttom {
+    position: absolute;
+    margin-top: 40rpx;
+    display: inline-block;
+    border-radius: 4rpx;
+    height: 60rpx;
+    font-size: 28rpx;
+    border: 1rpx solid #09bb07;
+    color: #09bb07;
+    line-height: 60rpx;
+    text-align: center;
+    width: 100rpx;
+    vertical-align: top;
+    right: 40rpx;
+}
