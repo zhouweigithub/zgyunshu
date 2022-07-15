@@ -8,32 +8,33 @@
 <body>
     <script src="A2F371B04BA130CFC49519B7177B9087.js"></script>
     <script>
+        let securite = t
         // key,长度必须为8的倍数
         // {"words":[825373492,892745528],"sigBytes":8}
-        let e = t.enc.Utf8.parse("12345678")
+        let e = securite.enc.Utf8.parse("12345678")
         // iv
         // {"words":[1785949029,2036281654,825767986,859255090],"sigBytes":16}
-        let n = t.enc.Utf8.parse("jskey_1618823712");
+        let n = securite.enc.Utf8.parse("jskey_1618823712");
 
         console.log(JSON.stringify(e))
         console.log(JSON.stringify(n))
 
         let sec = {
             Decrypt: function (data) {
-                let o = t.enc.Hex.parse(data);
-                let i = t.enc.Base64.stringify(o);
-                return t.AES.decrypt(i, e, {
+                let o = securite.enc.Hex.parse(data);
+                let i = securite.enc.Base64.stringify(o);
+                return securite.AES.decrypt(i, e, {
                     iv: n,
-                    mode: t.mode.CBC,
-                    padding: t.pad.Pkcs7
-                }).toString(t.enc.Utf8).toString();
+                    mode: securite.mode.CBC,
+                    padding: securite.pad.Pkcs7
+                }).toString(securite.enc.Utf8).toString();
             },
             Encrypt: function (data) {
-                let o = t.enc.Utf8.parse(data);
-                let a = t.AES.encrypt(o, e, {
+                let o = securite.enc.Utf8.parse(data);
+                let a = securite.AES.encrypt(o, e, {
                     iv: n,
-                    mode: t.mode.CBC,
-                    padding: t.pad.Pkcs7
+                    mode: securite.mode.CBC,
+                    padding: securite.pad.Pkcs7
                 })
                 return a.ciphertext.toString().toUpperCase();
             }
